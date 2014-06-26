@@ -68,4 +68,7 @@ interface IPowerManager
 
     // controls whether PowerManager should doze after the screen turns off or not
     void setDozeAfterScreenOff(boolean on);
+
+    // add support for checking proximity when waking device
+    void wakeUpWithProximityCheck(long time, String reason, String opPackageName);
 }

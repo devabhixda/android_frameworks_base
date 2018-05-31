@@ -1049,7 +1049,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
     }
 
     private void toggleFlashLightProximityCheck() {
-        if (mProximitySensor != null) {
+        if (mProximitySensor != null && mProximityTimeOut != -1) {
             if (mHandler.hasMessages(MSG_CLEAR_PROXIMITY)) {
                 // A message is already queued
                 return;
@@ -1064,7 +1064,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
 
     private void toggleFlashLight() {
         performHapticFeedbackLw(null, HapticFeedbackConstants.LONG_PRESS, true);
-        Utils.toggleCameraFlash();
+        OzoneUtils.toggleCameraFlash();
     }
 
     private UEventObserver mHDMIObserver = new UEventObserver() {

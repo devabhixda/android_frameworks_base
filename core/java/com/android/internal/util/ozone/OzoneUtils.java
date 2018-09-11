@@ -22,6 +22,7 @@ import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.res.Resources;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CameraManager;
@@ -36,6 +37,7 @@ import android.os.SystemProperties;
 import android.view.IWindowManager;
 import android.view.WindowManagerGlobal;
 
+import java.util.Locale;
 public class OzoneUtils {
     public static final String INTENT_SCREENSHOT = "action_handler_screenshot";
     public static final String INTENT_REGION_SCREENSHOT = "action_handler_region_screenshot";
@@ -127,5 +129,10 @@ public class OzoneUtils {
      // Check to see if device supports A/B (seamless) system updates
     public static boolean isABdevice(Context context) {
         return SystemProperties.getBoolean("ro.build.ab_update", false);
+    }
+    // Check for Chinese language
+    public static boolean isChineseLanguage() {
+       return Resources.getSystem().getConfiguration().locale.getLanguage().startsWith(
+               Locale.CHINESE.getLanguage());
     }
 }

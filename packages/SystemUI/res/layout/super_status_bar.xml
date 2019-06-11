@@ -76,4 +76,35 @@
         sysui:ignoreRightInset="true"
         />
 
+    <LinearLayout 
+        android:layout_gravity="center|top"
+        android:orientation="vertical" 
+        android:id="@id/lock_icon_container" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="@dimen/status_bar_height">
+        
+    <com.android.systemui.statusbar.phone.LockIcon 
+        android:layout_gravity="center_horizontal" 
+        android:id="@+id/lock_icon" 
+        android:layout_width="@dimen/keyguard_lock_width" 
+        android:layout_height="@dimen/keyguard_lock_height"  
+        android:layout_marginTop="@dimen/keyguard_lock_padding" 
+        android:src="@drawable/ic_lock_24dp" 
+        android:scaleType="center"  
+        android:contentDescription="@string/accessibility_unlock_button" 
+        />
+        
+    <com.android.keyguard.KeyguardMessageArea 
+        android:ellipsize="marquee" 
+        android:gravity="center" 
+        android:id="@id/keyguard_message_area" 
+        android:focusable="true"  
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="@dimen/keyguard_lock_padding" 
+        android:singleLine="true" 
+        style="@style/Keyguard.TextView" 
+        />
+    </LinearLayout>
 </com.android.systemui.statusbar.phone.StatusBarWindowView>

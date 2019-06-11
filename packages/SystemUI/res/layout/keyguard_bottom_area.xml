@@ -83,15 +83,6 @@
         android:contentDescription="@string/accessibility_phone_button"
         android:tint="?attr/wallpaperTextColor" />
 
-    <com.android.systemui.statusbar.phone.LockIcon
-        android:id="@+id/lock_icon"
-        android:layout_width="@dimen/keyguard_affordance_width"
-        android:layout_height="@dimen/keyguard_affordance_height"
-        android:layout_gravity="bottom|center_horizontal"
-        android:src="@drawable/ic_lock_24dp"
-        android:contentDescription="@string/accessibility_unlock_button"
-        android:scaleType="center" />
-
     <FrameLayout
         android:id="@+id/overlay_container"
         android:layout_width="match_parent"

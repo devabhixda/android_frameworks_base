@@ -112,5 +112,8 @@
 
     <!-- Optional cancel button on Keyguard -->
     <item type="id" name="cancel_button"/>
+
+    <!-- LockScreen -->
+    <item type="id" name="lock_icon_container" />
 </resources>
 
